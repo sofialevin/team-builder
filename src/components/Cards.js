@@ -1,20 +1,23 @@
 import React from "react";
+import 'semantic-ui-css/semantic.min.css';
+import { Card } from 'semantic-ui-react';
 
 const Cards = props => {
 
     return (
-        <div>
+        <Card.Group>
             {props.teamMembers.map(teamMember => {
                 return (
-                    <div key={teamMember.id}>
-                        <p>Name: {teamMember.name}</p>
-                        <p>Email: {teamMember.email}</p>
-                        <p>Role: {teamMember.role}</p>
-                        <p>ID: {teamMember.id}</p>
-                    </div>
+                    <Card>
+                        <Card.Content key={teamMember.id}>
+                            <Card.Header>{teamMember.name}</Card.Header>
+                            <Card.Meta>{teamMember.email}</Card.Meta>
+                            <Card.Description>{teamMember.role}</Card.Description>
+                        </Card.Content>
+                    </Card>
                 )
             })}
-        </div>
+        </Card.Group>
     )
 }
 
