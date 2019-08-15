@@ -7,8 +7,8 @@ const Cards = props => {
         <Card.Group>
             {props.teamMembers.map(teamMember => {
                 return (
-                    <Card>
-                        <Card.Content key={teamMember.id}>
+                    <Card key={teamMember.id}>
+                        <Card.Content>
                             <Card.Header>{teamMember.name}</Card.Header>
                             <Card.Meta>{teamMember.email}</Card.Meta>
                             <Card.Description>{teamMember.role}</Card.Description>

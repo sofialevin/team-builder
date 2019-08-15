@@ -17,8 +17,8 @@ const Form = props => {
     }
 
     return (
-        <form onSubmit={submitForm} class="ui form">
-            <div class="field">
+        <form onSubmit={submitForm} className="ui form">
+            <div className="field">
                 <label htmlFor="name">Name:</label>
                 <input required
                 type="text" 
@@ -27,7 +27,7 @@ const Form = props => {
                 onChange={event => handleChange(event)}
                 />
             </div>
-            <div class="field">
+            <div className="field">
                 <label htmlFor="email">Email:</label>
                 <input required
                 type="text" 
@@ -36,7 +36,7 @@ const Form = props => {
                 onChange={event => handleChange(event)}
                 />
             </div>
-            <div class="field">
+            <div className="field">
                 <label htmlFor="role">Role:</label>
                 <input required
                 type="text" 
@@ -45,7 +45,7 @@ const Form = props => {
                 onChange={event => handleChange(event)}
                 />
             </div>
-            <button class="ui button" type="submit">Add Team Member</button>
+            <button className="ui button" type="submit">Add Team Member</button>
         </form>
     )
 }
