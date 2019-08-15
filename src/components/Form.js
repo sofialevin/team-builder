@@ -17,29 +17,35 @@ const Form = props => {
     }
 
     return (
-        <form onSubmit={submitForm}>
-            <label htmlFor="name">Name:</label>
-            <input 
-            type="text" 
-            name="name" 
-            value={teamMember.name}
-            onChange={event => handleChange(event)}
-            />
-            <label htmlFor="email">Email:</label>
-            <input 
-            type="text" 
-            name="email" 
-            value={teamMember.email} 
-            onChange={event => handleChange(event)}
-            />
-            <label htmlFor="role">Role:</label>
-            <input 
-            type="text" 
-            name="role" 
-            value={teamMember.role}
-            onChange={event => handleChange(event)}
-            />
-            <button type="submit">Add Team Member</button>
+        <form onSubmit={submitForm} class="ui form">
+            <div class="field">
+                <label htmlFor="name">Name:</label>
+                <input required
+                type="text" 
+                name="name" 
+                value={teamMember.name}
+                onChange={event => handleChange(event)}
+                />
+            </div>
+            <div class="field">
+                <label htmlFor="email">Email:</label>
+                <input required
+                type="text" 
+                name="email" 
+                value={teamMember.email} 
+                onChange={event => handleChange(event)}
+                />
+            </div>
+            <div class="field">
+                <label htmlFor="role">Role:</label>
+                <input required
+                type="text" 
+                name="role" 
+                value={teamMember.role}
+                onChange={event => handleChange(event)}
+                />
+            </div>
+            <button class="ui button" type="submit">Add Team Member</button>
         </form>
     )
 }
